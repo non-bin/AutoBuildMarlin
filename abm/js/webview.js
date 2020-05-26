@@ -87,6 +87,12 @@ var ABM = (function(){
           case 'start':
             $('#showy input[name="show_on_startup"]').prop('checked', m.start);
             break;
+
+          case 'tree':
+            //console.log("Got tree data", m.data);
+            $('#debug-tree').jsonbrowser(m.data);
+            break;
+
           case 'envs':
             // We finally got environments!
             // Make some buttons...
